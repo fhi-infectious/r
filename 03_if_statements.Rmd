@@ -1,0 +1,113 @@
+---
+title: "03 If statements"
+author: "Richard White"
+date: "2018-03-23"
+output:
+  html_document:
+    df_print: paged
+editor_options: 
+  chunk_output_type: console
+---
+
+# control flow statements
+
+In programs, we often want to change the flow of the program, depending on if certain things are true. We can use if statements to determine this.
+
+```{r}
+a = 3
+if(a==6){
+  print("a is 6")
+} else {
+  print("a is not 6")
+}
+```
+
+Task:
+
+- create a vector (called "d") containing 1, 2, 3, 4, 5
+- find out the length of d (using `length`) ("how many post boxes we have")
+- if the length of "d" is less than 3, print "short", otherwise print "long"
+
+```{r}
+d = c(1,2,3,4,5)
+# OR
+d = c(1:5)
+
+print(length(d))
+
+if(length(d)<3){
+  print("short")
+} else {
+  print("long")
+}
+
+```
+
+Task:
+
+- create a vector (called "d") containing 1, 2, 3, 4, 5
+- find out the length of d (using `length`) ("how many post boxes we have")
+- if the length of "d" is less than 3, print "short", if the length of "d" is between 3 and 7 (inclusive) print "medium", otherwise print "long"
+- HINT: use "else if"
+
+```{r}
+d = c(1,2,3,4,5)
+# OR
+d = c(1:5)
+
+print(length(d))
+
+if(length(d)<3){
+  print("short")
+} else if(length(d)<7){
+  print("medium")
+} else {
+  print("long")
+}
+```
+
+# subsetting data
+
+Task:
+
+- create a vector (called "d") containing -10, -9, ..., 9, 10
+- create a new vector from "d" (called "pos") containing the values 1, ..., 10
+
+```{r}
+d = c(-10:10)
+print(d>0)
+pos = d[d>0]
+print(pos)
+```
+
+Task:
+
+- create a vector (called "d") containing -10, -9, ..., 9, 10
+- create a new vector from "d" (called "neg") containing the values -10, ..., -1
+
+```{r}
+d = c(-10:10)
+print(d<0)
+neg = d[d<0]
+print(neg)
+```
+
+Task:
+
+- create a vector (called "A") containing -10, -9, ..., 9, 10
+- create a vector (called "B") containing 101, ..., 150
+- create two new vectors ("small" and "big") where "small" contains the shorter vector and "big" contains the longer vector
+
+
+```{r}
+A = c(-10:10)
+B = c(101:150)
+
+if(length(A) < length(B)){
+  small = A
+  big = B
+} else {
+  small = B
+  big = A
+}
+```

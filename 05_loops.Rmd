@@ -1,0 +1,100 @@
+---
+title: "05 Loops"
+author: "Richard White"
+date: "2018-03-23"
+output:
+  html_document:
+    df_print: paged
+editor_options: 
+  chunk_output_type: console
+---
+
+STATA:
+
+```{}
+forvalues X=1/5 {
+  display `X'
+}
+```
+
+```{r}
+for(i in c(1:5)){
+  print(i)
+}
+```
+
+
+Task:
+
+- Create a vector containing some names
+- Loop through the vector and print them all UPPERCASE using function `toupper()`
+
+```{r}
+myNames <- c("richArd","Tamara","hello","HILdE")
+
+for(name in myNames){
+  print(toupper(name))
+}
+
+for(i in c(1:4)){
+  print(i)
+}
+
+
+```
+
+
+Task:
+
+- Create a vector containing some names
+- Loop through the vector and print them all UPPERCASE using function `toupper()`
+
+```{r}
+myNames <- c("richArd","Tamara","hello","HILdE")
+
+for(name in myNames){
+  print(name)
+}
+
+for(i in 1:length(myNames)){
+  print(toupper(myNames[i]))
+}
+
+for(i in 1:length(myNames)){
+  print(sprintf("Name #%s is %s",i,toupper(myNames[i])))
+}
+```
+
+Task:
+
+- add in last names
+
+```{r}
+lastNames <- c("lastname1","lastname2","lastname3","lastname4")
+
+for(i in 1:length(myNames)){
+  print(sprintf("Name #%s is %s %s",i,toupper(myNames[i]),toupper(lastNames[i])))
+}
+```
+
+
+Task:
+
+- Do the same as above, but in a data.frame
+
+```{r}
+d <- data.frame(myNames,lastNames)
+
+for(i in 1:nrow(d)){
+  print(sprintf("Name #%s is %s %s",i,toupper(d$myNames[i]),toupper(d$lastNames[i])))
+}
+```
+
+
+
+
+
+
+
+
+

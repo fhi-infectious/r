@@ -1,0 +1,33 @@
+---
+title: "02 Vectors"
+author: "Richard White"
+date: "2018-03-23"
+output:
+  html_document:
+    df_print: paged
+editor_options: 
+  chunk_output_type: console
+---
+
+# vectors!
+```{r}
+var <- c(10,20,30,40,50,50,60,70)
+print(var)
+
+# i want the value in the 6th position
+print(var[6])
+
+# i want to change the value in the 2nd position
+var[2] <- 1000
+print(var)
+
+# i want to change the value in the 1st position to 8
+var[1] <- 8
+
+# i want to make the 3rd value equal to the first value plus the second value
+var[3] <- var[1] + var[2]
+
+# i want to check that the 3rd value is equal to the first value plus the second value
+print(var[3]==var[1] + var[2])
+
+```

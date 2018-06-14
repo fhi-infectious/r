@@ -1,0 +1,51 @@
+---
+title: "01 Simple variables"
+author: "Richard White"
+date: "2018-03-23"
+output:
+  html_document:
+    df_print: paged
+editor_options: 
+  chunk_output_type: console
+---
+
+# Assigning a variable
+
+In stata, we assign variables by doing this:
+
+```
+gen var1 = "a"
+```
+
+In R, we assign variables by doing this:
+
+```{r}
+var1 = "a"
+```
+
+or this
+
+```{r}
+var1 <- "a"
+```
+
+This is nice, because it makes it easier to see the difference between "=" (assigning) and "==" (a question). In R, we have "<-" (assigning) and "==" (a question).
+
+# What kind of variables can we have?
+
+```{r}
+# character/string
+var1 <- "a"
+print(var1)
+
+# numeric
+var2 <- 3
+print(var2)
+
+# categorical/factors
+var3 <- factor(3,levels=c(1,2,3),labels=c("low","medium","high"))
+print(var3)
+
+var3 <- factor(2,levels=c(1,2,3),labels=c("low","medium","high"))
+print(var3)
+```

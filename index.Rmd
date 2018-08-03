@@ -18,3 +18,28 @@ for(i in 1:length(h)){
   cat(sprintf("%s. [%s](%s)\n\n",i,h[i],h[i]))
 }
 ```
+
+
+
+# Planning
+
+**Gry**
+
+- Welcome to R/RStudio
+- Variable types
+
+**Ida**
+
+- Control structures
+- `if` statements
+- `for` statements
+
+**Torbjørn**
+
+- Subsetting data
+
+**Richard**
+
+- Functions
+- `data.table` package
+
